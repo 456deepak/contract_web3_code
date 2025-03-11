@@ -19,13 +19,15 @@ const user = require("./routes/userRoute");
 const product = require("./routes/productRoute");
 const order = require("./routes/orderRoute");
 const payment = require("./routes/paymentRoute");
-const contractRouter = require("./routes/contractRoute");
+const blockChain = require("./routes/blockChain");
+const NoteRouter = require("./routes/noteRoute");
 
 app.use("/api/v1", user);
 app.use("/api/v1", product);
 app.use("/api/v1", order);
 app.use("/api/v1", payment);
-app.use("/hello/apitest", contractRouter);
+app.use("/api/v1", NoteRouter);
+app.use("/brt/apitest", blockChain);
 
 // deployment
 __dirname = path.resolve();
